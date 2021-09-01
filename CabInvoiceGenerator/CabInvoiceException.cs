@@ -14,7 +14,6 @@ namespace CabInvoiceGenerator
             NULL_RIDES,
             INVALID_USER_ID
         }
-
         ExceptionType type;
         public CabInvoiceException(ExceptionType type, string message) : base(message)
         {

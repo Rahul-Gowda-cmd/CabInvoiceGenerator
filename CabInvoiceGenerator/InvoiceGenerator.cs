@@ -83,6 +83,7 @@ namespace CabInvoiceGenerator
             }
             return new InvoiceSummary(rides.Length, totalFare);
         }
+
         public void ADDRides(string userId,Ride[] rides)
         {
             try
