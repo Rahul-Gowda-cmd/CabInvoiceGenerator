@@ -47,5 +47,15 @@ namespace CabInvoicerTest
             InvoiceSummary expectedSummary = new InvoiceSummary(2, 30.0, "101");
             Assert.AreEqual(expectedSummary, summary);
         }
+        [Test]
+        public void GivenRides_ForPremiumUser_ShouldReturnTotalFare()
+        {
+            invoiceGenerator = new InvoiceGenerator(RideType.PREMIUM);
+            double distance = 3.0;
+            int time = 10;
+            double fare = invoiceGenerator.CalculateFare(distance, time);
+            double expected = 65;
+            Assert.AreEqual(expected, fare);
+        }
     }
 }

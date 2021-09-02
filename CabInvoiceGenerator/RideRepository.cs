@@ -12,6 +12,7 @@ namespace CabInvoiceGenerator
         {
             this.userRides = new Dictionary<string, List<Ride>>();
         }
+
         public void AddRide(string userId, Ride[] rides)
         {
             bool rideList = this.userRides.ContainsKey(userId);
@@ -29,6 +30,7 @@ namespace CabInvoiceGenerator
                 throw new CabInvoiceException(CabInvoiceException.ExceptionType.NULL_RIDES, "Rides are null");
             }
         }
+
         public Ride[] getRides(string userId)
         {
  
